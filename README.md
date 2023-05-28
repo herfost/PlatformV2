@@ -20,9 +20,5 @@ Raccolta delle Frequent Asked Questions, domande rivolte all'istituto e alla vit
   "tags": []
 }
 ```
-
-# Todo
-1. Aggiungere filtro domande 
-
 #  Crediti
 L'iniziativa nasce ispirandosi al [PoliNetwork]()

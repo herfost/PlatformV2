@@ -43,8 +43,7 @@ export default function AnswerCard({ id, content, username }: IAnswer) {
         sx={{
           marginBlockStart: 2,
           padding: 2,
-          boxShadow: "1px 1px 2px black",
-          borderColor: "black",
+          boxShadow: "1px 1px 3px  black",
           display: "flex",
           justifyContent: "space-between",
         }}

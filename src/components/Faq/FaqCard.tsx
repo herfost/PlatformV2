@@ -4,8 +4,8 @@ import CardContent from "@mui/material/CardContent/CardContent";
 import Card from "@mui/material/Card/Card";
 import Divider from "@mui/material/Divider/Divider";
 import LinkIcon from "@mui/icons-material/Link";
-import AnswerCard, { IAnswer } from "./Answer/Answer";
-import TagCard, { ITag } from "./Tag/Tag";
+import AnswerCard, { IAnswer } from "./Answer";
+import TagCard, { ITag } from "./Tag";
 
 export interface IFaq {
   id: number;
@@ -19,22 +19,16 @@ export default function FaqCard({ id, title, answers, tags }: IFaq) {
   const cardId = "card-" + id;
 
   const answerList = answers?.map((answer) => {
-    return (
-      <AnswerCard
-        id={answer.id}
-        content={answer.content}
-        username={answer.username}
-      />
-    );
+    return <AnswerCard {...answer} />;
   });
 
   const tagList = tags?.map((tag) => {
-    return <TagCard name={tag.name} />;
+    return <TagCard {...tag} />;
   });
 
   return (
-    <Card id={cardId} sx={{ margin:5 }}>
-      <CardContent sx={{alignItems: "flex-end"}}>
+    <Card id={cardId} sx={{ margin: 5, boxShadow: "1px 1px 4px black" }}>
+      <CardContent sx={{ alignItems: "flex-end" }}>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <Typography id={titleId} variant="h5" component="h1">
             {title}
@@ -45,8 +39,9 @@ export default function FaqCard({ id, title, answers, tags }: IFaq) {
         </Box>
         <Divider />
         {answerList}
-        <Divider sx={{padding: 2}}/>
-        <Box sx={{ display: "flex", justifyContent: "flex-end"}}>
+        {answerList?.length != 0 ? <Divider sx={{ padding: 2 }} /> : <></>}
+
+        <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
           {tagList}
         </Box>
       </CardContent>

@@ -1,6 +1,6 @@
-import { IAnswer } from "../components/Faq/Answer/Answer";
+import { IAnswer } from "../components/Faq/Answer";
 import { IFaq } from "../components/Faq/FaqCard";
-import { ITag } from "../components/Faq/Tag/Tag";
+import { ITag } from "../components/Faq/Tag";
 
 function tagList(tags: string[]): ITag[] {
   const tagList: ITag[] = [];
@@ -18,7 +18,8 @@ function labelList(labels: IFaq[]): { label: string }[] {
   return labelList;
 }
 
-const answers: IAnswer[] = [
+// const answers: IAnswer[] = [];
+ const answers: IAnswer[] = [
   {
     id: 1,
     username: "John",
@@ -46,13 +47,31 @@ const answers: IAnswer[] = [
   },
 ];
 
+
+// let tags: ITag[] = [];
+const tags = tagList(["Testing", "Example"]);
+
+
 export const faqs: IFaq[] = [
   {
     id: 1,
     title: "Domanda",
     answers: answers,
-    tags: tagList(["Testing", "Example"]),
+    tags: tags
   },
+  {
+    id: 2,
+    title: "Question",
+    answers: answers,
+    tags: tags
+  },
+  {
+    id: 3,
+    title: "Dunno",
+    answers: [],
+    tags: []
+  },
+
 ];
 
 export const labels = labelList(faqs);
