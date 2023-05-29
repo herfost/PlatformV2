@@ -31,7 +31,7 @@ export default function FaqCard({ id, title, answers, tags }: IFaq) {
       <Card id={cardId} sx={{ margin: 5, boxShadow: "1px 1px 4px black" }}>
         <CardContent sx={{ alignItems: "flex-end" }}>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography id={title} variant="h5" component="h1">
+            <Typography id={titleId} variant="h5" component="h1">
               {title}
             </Typography>
             <a href={"#" + titleId}>
