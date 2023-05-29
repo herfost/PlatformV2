@@ -27,24 +27,25 @@ export default function FaqCard({ id, title, answers, tags }: IFaq) {
   });
 
   return (
-    <Card id={cardId} sx={{ margin: 5, boxShadow: "1px 1px 4px black" }}>
-      <CardContent sx={{ alignItems: "flex-end" }}>
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography id={titleId} variant="h5" component="h1">
-            {title}
-          </Typography>
-          <a href={"#" + titleId}>
-            <LinkIcon />
-          </a>
-        </Box>
-        <Divider />
-        {answerList}
-        {answerList?.length != 0 ? <Divider sx={{ padding: 2 }} /> : <></>}
-
-        <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-          {tagList}
-        </Box>
-      </CardContent>
-    </Card>
+    <>
+      <Card id={cardId} sx={{ margin: 5, boxShadow: "1px 1px 4px black" }}>
+        <CardContent sx={{ alignItems: "flex-end" }}>
+          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Typography id={title} variant="h5" component="h1">
+              {title}
+            </Typography>
+            <a href={"#" + titleId}>
+              <LinkIcon />
+            </a>
+          </Box>
+          <Divider />
+          {answerList}
+          {answerList?.length != 0 ? <Divider sx={{ padding: 2 }} /> : <></>}
+          <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+            {tagList}
+          </Box>
+        </CardContent>
+      </Card>
+    </>
   );
 }

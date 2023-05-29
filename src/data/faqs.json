@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Sistema di geolocalizzazione per le papere",
+      "answers": [
+        {
+          "id": 1,
+          "username": "John",
+          "content": "Utilizzare API Google e dispositivi GPS"
+        }
+      ],
+      "tags": [{ "name": "Papere" }]
+    },
+    {
+      "id": 2,
+      "title": "Una domanda iperbolica",
+      "answers": [
+        { "id": 2, "username": "Iperbole", "content": "Una riposta iperbolica" }
+      ],
+      "tags": [{ "name": "Iperbole" }]
+    }
+  ]
+}

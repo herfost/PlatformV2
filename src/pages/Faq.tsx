@@ -1,28 +1,28 @@
 import { Autocomplete } from "@mui/material";
 import TextField from "@mui/material/TextField/TextField";
 import FaqCard from "../components/Faq/FaqCard";
-import { faqs, labels } from "../dataset/testingData";
+import { faqsData, labels } from "../data/testingData";
 import { useState } from "react";
 
 export default function Faq() {
-  const [faqElements, setFaqElements] = useState(faqs);
+  const [faqElements, setFaqElements] = useState(faqsData);
 
   const filterByTitle = (
     event: React.SyntheticEvent<Element, Event>,
     search?: string
   ): void => {
-    const faqElementsFiltered = faqs.filter((faq) => {
+    const faqElementsFiltered = faqsData.filter((faq) => {
       return search == null
-        ? faqs
+        ? faqsData
         : faq.title.toLowerCase().includes(search.toLowerCase());
-        /**
+      /**
          * TODO: Estendere ricerca per contentuo e tag
         || (faq.answers != null && faq.answers?.map((answer) => answer.content.toLowerCase().includes(search.toLowerCase())).length > 0) 
         || (faq.tags != null && faq.tags?.map((tag) => tag.name.toLowerCase().includes(search.toLowerCase())).length > 0);
         */
     });
 
-    setFaqElements("" === search ? faqs : faqElementsFiltered);
+    setFaqElements("" === search ? faqsData : faqElementsFiltered);
   };
 
   const options = labels;
