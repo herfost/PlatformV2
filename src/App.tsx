@@ -1,12 +1,15 @@
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import FaqForm from "./components/Faq/FaqForm";
-import "./index.css";
 import Faq from "./pages/Faq";
+import "./index.css";
 
 export default function App() {
   return (
-    <>
-      <FaqForm />
-      <Faq />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/form" element={<FaqForm />} />
+        <Route path="/faq" element={<Faq />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

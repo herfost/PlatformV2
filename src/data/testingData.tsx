@@ -5,7 +5,7 @@ function labelList(labels: IFaq[]): { label: string }[] {
   const labelList: { label: string }[] = [];
   labels.map((label) => {
     labelList.push({ label: label.title });
-});
+  });
 
   return labelList;
 }

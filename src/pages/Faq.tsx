@@ -12,17 +12,13 @@ export default function Faq() {
     search?: string
   ): void => {
     const faqElementsFiltered = faqsData.filter((faq) => {
-      return search == null
-        ? faqsData
-        : faq.title.toLowerCase().includes(search.toLowerCase());
-      /**
-         * TODO: Estendere ricerca per contentuo e tag
-        || (faq.answers != null && faq.answers?.map((answer) => answer.content.toLowerCase().includes(search.toLowerCase())).length > 0) 
-        || (faq.tags != null && faq.tags?.map((tag) => tag.name.toLowerCase().includes(search.toLowerCase())).length > 0);
-        */
+      return (
+        search != undefined &&
+        faq.title.toLowerCase().includes(search.toLowerCase())
+      );
     });
 
-    setFaqElements("" === search ? faqsData : faqElementsFiltered);
+    setFaqElements(faqElementsFiltered);
   };
 
   const options = labels;
