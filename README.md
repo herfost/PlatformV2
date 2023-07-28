@@ -1,6 +1,6 @@
 # Platform
 
-Semplice [piattaforma web per visualizzare FAQ](https://herfost.github.io/PlatformV2/faq).
+Semplice [piattaforma web per visualizzare FAQ](https://herfost.github.io/PlatformV2).
 
 ## Archiviazione dei dati
 
