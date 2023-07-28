@@ -1,14 +1,14 @@
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FaqForm from "./components/Faq/FaqForm";
-import Faq from "./pages/Faq";
 import "./index.css";
+import Faq from "./pages/Faq";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/form" element={<FaqForm />} />
-        <Route path="/faq" element={<Faq />} />
+        <Route path="/PlatformV2/form" element={<FaqForm />} />
+        <Route path="/PlatformV2/faq" element={<Faq />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,32 +1,42 @@
-# Maginetwork
-Il network degli studenti dell'istituto [Magistri Cumacini]()
+# Platform
 
-## Piattaforma dello studente
-La piattaforma dello studente raccoglie diversi servizi volti a facilitare la vita scolastica, lo studio e l'orientamento all'interno del nostro istituto. Le diverse pagine consentono un accesso semplice e interattivo alle numerose funzionalità offerte.
+Semplice [piattaforma web per visualizzare FAQ](https://herfost.github.io/PlatformV2/faq).
 
-## Informazioni
-Le informazioni e dati utilizzati dall'applicazione sono memorizzati all'interno di appositi file [JSON](/src/data/)
+## Archiviazione dei dati
 
-### FAQs
-Raccolta delle Frequent Asked Questions, domande rivolte all'istituto e alla vita scolastica, corredati di relative risposte.
+Al fine di veicolare l'archiviazione su database, i dati vengono memorizzati su File [JSON](/src/data/)
+
+## Struttura dell'oggetto FAQ:
+
 ```json
 {
-  "title": "Titolo della domanda",
+  "title": "",
   "answers": [
     {
-      "id": "Identificato della risposta",
-      "username": "Nome dell'utente che ha risposto",
-      "content": "Contenuto della risposta"
+      "id": "",
+      "username": "",
+      "content": ""
     }
   ],
   "tags": []
 }
 ```
-1. Dividere la sezione delle FAQ dalla sezione della generazione delle FAQ
-2. Realizzare Routing delle pagine 
-3. Aggiungere Layout 
-4. Aggiungere Navbar
-5. Pubblicare su Github Pages 
 
-#  Crediti
-L'iniziativa nasce ispirandosi al [PoliNetwork]()
+## Esegui in locale
+
+```sh
+git clone https://github.com/herfost/PlatformV2.git
+cd PlatformV2
+npm i
+npm run dev
+```
+
+## Deployment:
+```sh
+npm run build
+git add dist -f
+git commit -m "dist version #{versione dist}"
+git subtree push --prefix dist origin gh-pages
+```
+
+Per maggiori informazioni: https://dev.to/shashannkbawa/deploying-vite-app-to-github-pages-3ane

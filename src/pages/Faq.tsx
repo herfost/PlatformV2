@@ -1,8 +1,8 @@
 import { Autocomplete } from "@mui/material";
 import TextField from "@mui/material/TextField/TextField";
+import { useState } from "react";
 import FaqCard from "../components/Faq/FaqCard";
 import { faqsData, labels } from "../data/testingData";
-import { useState } from "react";
 
 export default function Faq() {
   const [faqElements, setFaqElements] = useState(faqsData);
@@ -13,7 +13,9 @@ export default function Faq() {
   ): void => {
     const faqElementsFiltered = faqsData.filter((faq) => {
       return (
-        search != undefined &&
+         
+
+        event.target != undefined && search != undefined &&
         faq.title.toLowerCase().includes(search.toLowerCase())
       );
     });

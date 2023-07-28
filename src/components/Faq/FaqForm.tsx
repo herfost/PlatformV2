@@ -1,8 +1,6 @@
-import { Box, Container, TextField, Button, Typography } from "@mui/material";
-import { useState } from "react";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
-import { IFaq } from "./FaqCard";
-import { ITag } from "./Tag";
+import { Box, Button, Container, TextField, Typography } from "@mui/material";
+import { useState } from "react";
 
 export default function FaqForm() {
   const [title, setTitle] = useState("");
